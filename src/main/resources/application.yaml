@@ -1,0 +1,21 @@
+spring:
+  application:
+    name: book-service
+  datasource: 
+    url: jdbc:h2:mem:bookstore;DB_CLOSE_DELAY=-1
+    driver-class-name: org.h2.Driver
+    username: sa
+    password: 
+  jpa:
+    show-sql: true
+    hibernate:
+      ddl-auto: validate
+  h2:
+    console:
+      enabled: true
+      path: /h2-console
+  security:
+    oauth2:
+      resourceserver: 
+        jwt:
+          issuer-uri: https://keycloak-davida03-dev.apps.rm3.7wse.p1.openshiftapps.com/realms/books-realm
