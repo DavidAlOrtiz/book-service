@@ -18,4 +18,6 @@ public interface BookService {
 
     void delete(Long id);
 
+    byte[] getPdf(Long id);
+
 }

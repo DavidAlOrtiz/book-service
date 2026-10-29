@@ -14,5 +14,4 @@ public interface BookRepository extends JpaRepository<Book, Long>, JpaSpecificat
     @Override
     @EntityGraph(attributePaths = { "author", "category" })
     Page<Book> findAll(Specification<Book> spec, Pageable pageable);
-
 }

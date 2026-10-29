@@ -19,3 +19,6 @@ spring:
       resourceserver: 
         jwt:
           issuer-uri: https://keycloak-davida03-dev.apps.rm3.7wse.p1.openshiftapps.com/realms/books-realm
+
+server:
+  port: 8081

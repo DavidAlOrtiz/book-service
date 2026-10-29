@@ -24,6 +24,8 @@ CREATE TABLE IF NOT EXISTS books (
     price          NUMERIC(10,2) NOT NULL CHECK (price >= 0),
     cover_url      VARCHAR(255),
     published_year INTEGER,
+    pdf_base64     VARCHAR(14000000),
+    has_pdf        BOOLEAN NOT NULL DEFAULT FALSE,
     author_id      BIGINT NOT NULL REFERENCES authors(id),
     category_id    BIGINT NOT NULL REFERENCES categories(id),
     created_at     TIMESTAMP NOT NULL DEFAULT CURRENT_TIMESTAMP

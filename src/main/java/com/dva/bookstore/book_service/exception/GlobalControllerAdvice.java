@@ -79,4 +79,10 @@ public class GlobalControllerAdvice {
         problem.setProperty("timestamp", Instant.now());
         return problem;
     }
+
+    @ExceptionHandler(InvalidFileException.class)
+    public ProblemDetail handleInvalidFile(InvalidFileException ex) {
+        log.warn("Invalid file: {}", ex.getMessage());
+        return build(HttpStatus.BAD_REQUEST, "Invalid File", ex.getMessage());
+    }
 }

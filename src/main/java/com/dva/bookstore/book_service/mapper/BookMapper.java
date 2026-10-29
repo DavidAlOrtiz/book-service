@@ -21,11 +21,15 @@ public interface BookMapper {
     @Mapping(target = "author", ignore = true)
     @Mapping(target = "category", ignore = true)
     @Mapping(target = "createdAt", ignore = true)
+    @Mapping(target = "hasPdf", ignore = true)
+    @Mapping(target = "pdfBase64", ignore = true)
     Book toEntity(BookRequest request);
 
     @Mapping(target = "id", ignore = true)
     @Mapping(target = "author", ignore = true)
     @Mapping(target = "category", ignore = true)
     @Mapping(target = "createdAt", ignore = true)
+    @Mapping(target = "hasPdf", ignore = true)
+    @Mapping(target = "pdfBase64", ignore = true)
     void updateEntity(BookRequest request, @MappingTarget Book book);
 }
